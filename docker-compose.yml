@@ -15,7 +15,7 @@ services:
     image: liquibase/liquibase
     command: --url='jdbc:mysql://test-db:3306/test_db' --changeLogFile=changelog.xml --username=root --password=password update
     volumes:
-      - ./config/changelog2.xml:/liquibase/changelog.xml
+      - ./config/changelog.xml:/liquibase/changelog.xml
       - ./lib:/liquibase/lib
       - ./scripts:/liquibase/scripts
     links:
